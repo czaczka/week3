@@ -9,3 +9,7 @@ let server = http.listen(3000, function(){
     console.log("my first nodeJS server");
     console.log("server listening on: " + host + "port: " + port);
 });
+
+app.get('/test', function(req,res){
+    res.sendFile(__dirname + '/www/test.html');
+});
